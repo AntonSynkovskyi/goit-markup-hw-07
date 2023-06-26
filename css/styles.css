@@ -55,7 +55,7 @@ img {
   padding-bottom: 96px;
 }
 .container {
-  width: 100%;
+  max-width: 428px;
   padding-left: 16px;
   padding-right: 16px;
   margin: 0 auto;
@@ -191,6 +191,7 @@ img {
 
 .mob-menu-address-tel {
   color: var(--primary-brand-color);
+  font-style: normal;
   font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
@@ -206,6 +207,7 @@ img {
 .mob-menu-address-email {
   font-size: 20px;
   font-weight: 500;
+  font-style: normal;
   line-height: 1.2;
   letter-spacing: 0.4px;
 }
@@ -766,7 +768,7 @@ img {
   position: relative;
   min-height: 584px;
   width: 408px;
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
 
   background: var(--modal-background-color);
   /* background-color: #31d0aa; */
@@ -834,7 +836,7 @@ img {
 
 .input-wrap {
   position: relative;
-  width: 360px;
+  width: 376px;
 }
 
 .modal-field {
@@ -883,7 +885,7 @@ img {
 
 .modal-textarea {
   height: 120px;
-  width: 360px;
+  width: 376px;
   background-color: transparent;
   outline: transparent;
   border: 1px solid var(--modal-overlay-color);
@@ -965,6 +967,10 @@ img {
 /*----------MEDIA-----------*/
 
 @media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
   .header-list {
     display: flex;
     gap: 40px;
@@ -1085,10 +1091,6 @@ img {
     letter-spacing: 0.02em;
   }
 
-  .features > .container {
-    width: 768px;
-  }
-
   .features-list {
     row-gap: 72px;
     column-gap: 24px;
@@ -1099,11 +1101,12 @@ img {
   .features-item-title {
     text-align: unset;
   }
-  .team > .container {
-    width: 768px;
-  }
+
   .team-list {
     row-gap: 64px;
+  }
+  .customers > .container {
+    width: 558px;
   }
   .customers-item {
     width: calc((100% - 2 * 24px) / 3);
@@ -1127,6 +1130,9 @@ img {
     margin-right: 24px;
     display: block;
   }
+  .footer > .container {
+    width: 558px;
+  }
   .footer-logo {
     margin-right: auto;
     margin-left: auto;
@@ -1148,11 +1154,21 @@ img {
     margin-bottom: 0;
     width: 264px;
   }
+  .modal {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .input-wrap {
+    width: 360px;
+  }
+  .modal-textarea {
+    width: 360px;
+  }
 }
 
 @media screen and (min-width: 1158px) {
   .container {
-    max-width: 1440px;
+    max-width: 1158px;
   }
   .logo-link {
     margin-right: 76px;
@@ -1195,10 +1211,6 @@ img {
     margin-bottom: 48px;
   }
 
-  .features > .container {
-    width: 100%;
-  }
-
   .features-svg-container {
     display: flex;
     justify-content: center;
@@ -1229,13 +1241,12 @@ img {
     padding-bottom: 120px;
   }
 
-  .team > .container {
-    width: 100%;
-  }
-
   .examples {
     display: block;
     background: var(--white-background-color);
+  }
+  .examples.section {
+    padding-top: 0;
   }
   .examples-title {
     margin-bottom: 72px;
@@ -1260,6 +1271,10 @@ img {
     padding-right: 15px;
   }
 
+  .customers > .container {
+    width: 1158px;
+  }
+
   .customers-item {
     width: calc((100% - 5 * 24px) / 6);
   }
@@ -1271,6 +1286,7 @@ img {
   }
   .left-div {
     margin-right: 120px;
+    margin-bottom: 0;
   }
   .footer-logo {
     margin-right: auto;
